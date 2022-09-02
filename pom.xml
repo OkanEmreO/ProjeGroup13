@@ -113,7 +113,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-             <!-- XML paralel çalışmada master report için kondu-->
+<!--              XML paralel çalışmada master report için kondu-->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/java/XMLFiles/ParallelTesting_MasterReport.xml</suiteXmlFile>
                     </suiteXmlFiles>
