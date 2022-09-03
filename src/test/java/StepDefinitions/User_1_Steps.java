@@ -11,6 +11,7 @@ public class User_1_Steps extends Parent {
     User_1_LeftNav u1l=new User_1_LeftNav();
     DialogContent dc=new DialogContent();
 
+
     @Given("Navigate to position categories")
     public void navigateToPositionCategories() {
         u1l.findAndClick("humanresources");

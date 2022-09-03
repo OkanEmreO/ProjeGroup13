@@ -10,6 +10,7 @@ Feature: User-1 Scenario
     When Create position categories
     Then Success message should be displayed
 
+
   Scenario: Human resources position edit
     Given Navigate to position categories
     When Edit user position

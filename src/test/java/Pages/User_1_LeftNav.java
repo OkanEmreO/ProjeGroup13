@@ -40,6 +40,7 @@ public class User_1_LeftNav extends Parent {
             case "editButton":
                 myElement = editButton;
                 break;
+
         }
         clickFunction(myElement);
     }
