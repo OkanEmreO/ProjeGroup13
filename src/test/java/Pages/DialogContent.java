@@ -10,19 +10,14 @@ public class DialogContent extends Parent{
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-
     @FindBy(id="mat-input-0")
     private WebElement username;
-
     @FindBy(id="mat-input-1")
     private WebElement password;
-
     @FindBy(css="button[aria-label='LOGIN']")
     private WebElement loginButton;
-
     @FindBy(xpath="(//span[contains(text(),'Dashboard')])[2]")
     private WebElement dashboard;
-
     @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
 

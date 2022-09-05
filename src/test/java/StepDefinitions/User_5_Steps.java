@@ -56,7 +56,6 @@ public class User_5_Steps {
             //   System.out.println("listElement = " + listElement.get(i));
             user5.Delete(listElement.get(i));
         }
-
     }
 
     @And("Edit item Name")
