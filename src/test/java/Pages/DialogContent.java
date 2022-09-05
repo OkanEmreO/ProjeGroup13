@@ -68,6 +68,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'BUTTON.ADD')]//button")
+    private WebElement fieldsAddBtn;
+
+    @FindBy(xpath = "//ms-edit-button//button")
+    private WebElement editBtn;
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value){  // 2.aşama
         // burda string isimden weblemente ulaşıcam
@@ -98,6 +106,8 @@ public class DialogContent extends Parent{
             case "deleteButton" : myElement =deleteButton; break;
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
+            case "fieldsAddBtn" : myElement =fieldsAddBtn; break;
+            case "editBtn" : myElement =editBtn; break;
 
         }
 
