@@ -7,15 +7,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class User_1_Steps extends Parent {
-    User_1_LeftNav u1l=new User_1_LeftNav();
     DialogContent dc=new DialogContent();
 
 
     @Given("Navigate to position categories")
     public void navigateToPositionCategories() {
-        u1l.findAndClick("humanresources");
-        u1l.findAndClick("setup3");
-        u1l.findAndClick("positionsCategories");
+        dc.findAndClick("humanresources");
+        dc.findAndClick("setup3");
+        dc.findAndClick("positionsCategories");
     }
 
     @When("Create position categories")
@@ -35,7 +34,7 @@ public class User_1_Steps extends Parent {
     public void editUserPosition() {
         dc.findAndSend("searchInput","Sergen");
         dc.findAndClick("searchButton");
-        u1l.findAndClick("editButton");
+        dc.findAndClick("editButton");
         dc.findAndSend("nameInput", "Pascal");
         dc.findAndClick("saveButton");
     }
