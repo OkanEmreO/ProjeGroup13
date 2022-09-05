@@ -10,11 +10,9 @@ public class User_22 extends Parent{
     public User_22() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-    @FindBy(xpath = "//span[text()='Human Resources']")
-    private WebElement humanResources;
 
-    @FindBy(xpath = "//span[text()='Attestations']")
-    private WebElement attestations;
+
+
 
     @FindBy(xpath="(//span[text()='Setup'])[3]")
     private WebElement setup;
@@ -45,8 +43,7 @@ public class User_22 extends Parent{
         // burda string isimden weblemente ulaşıcam
         switch (strElement)
         {
-            case "humanResources" : myElement =humanResources; break;
-            case "attestations" : myElement =attestations; break;
+
             case "setup" : myElement =setup; break;
             case "addButton" : myElement =addButton; break;
             case "saveButton" : myElement =saveButton; break;
