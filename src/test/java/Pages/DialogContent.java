@@ -137,6 +137,23 @@ public class DialogContent extends Parent{
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
 
+    public void Edit(String strElement) throws InterruptedException {
+
+        findAndSend("searchInput", strElement);
+        findAndClick("searchButton");
+
+        waitUntilLoading();
+
+        findAndClick("editButton");
+    }
+
+    public void EditClick(String strElement){
+
+
+        findAndSend("nameInput",strElement);
+
+    }
+
 
 
 
