@@ -15,7 +15,6 @@ public class User_2 extends Parent{
     @FindBy(xpath="(//span[text()='Setup'])[3]")
     private WebElement setup;
 
-
     @FindBy(xpath = "(//ms-edit-button//button)[1]")
     private WebElement editButton;
 
