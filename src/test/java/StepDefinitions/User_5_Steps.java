@@ -46,11 +46,6 @@ public class User_5_Steps {
 
     }
 
-    @Then("Success message should be displayed")
-    public void successMessageShouldBeDisplayed() {
-        dc.findAndContainsText("successMessage","success");
-    }
-
 
     @Then("Click delete area")
     public void clickDeleteArea(DataTable elements) throws InterruptedException {
