@@ -24,6 +24,10 @@ public class User_1_LeftNav extends Parent {
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
+
+    @FindBy(xpath = "//ms-edit-button//button")
+    private WebElement editButton22;
+
     WebElement myElement;
 
     public void findAndClick(String strElement) {
