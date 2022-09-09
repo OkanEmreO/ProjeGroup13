@@ -1,38 +1,44 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class DialogContent extends Parent{
+public class DialogContent extends Parent {
+
+    WebDriverWait wait;
 
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(id="mat-input-0")
+    @FindBy(id = "mat-input-0")
     private WebElement username;
 
-    @FindBy(id="mat-input-1")
+    @FindBy(id = "mat-input-1")
     private WebElement password;
 
-    @FindBy(css="button[aria-label='LOGIN']")
+    @FindBy(css = "button[aria-label='LOGIN']")
     private WebElement loginButton;
 
-    @FindBy(xpath="(//span[contains(text(),'Dashboard')])[2]")
+    @FindBy(xpath = "(//span[contains(text(),'Dashboard')])[2]")
     private WebElement dashboard;
 
-    @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
 
-    @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
     private WebElement nameInput;
 
-    @FindBy(xpath="//ms-text-field[@formcontrolname='code']//input")
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
     private WebElement codeInput;
 
-    @FindBy(xpath="//ms-save-button//button")
+    @FindBy(xpath = "//ms-save-button//button")
     private WebElement saveButton;
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
@@ -68,66 +74,130 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
 
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'BUTTON.ADD')]//button")
-    private WebElement fieldsAddBtn;
+    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
+    private WebElement iban;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']/input")
+    private WebElement intCode;
+
+    @FindBy(xpath = "(//div[@class='w-100-p']/mat-form-field)[1]")
+    private WebElement currency;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[4]")
+    private WebElement turkishlira;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[3]")
+    private WebElement euro;
 
     @FindBy(xpath = "//ms-edit-button//button")
-    private WebElement editBtn;
-
-
+    private WebElement editButton;
 
     WebElement myElement;
-    public void findAndSend(String strElement, String value){  // 2.aşama
+
+    public void findAndSend(String strElement, String value) {  // 2.aşama
         // burda string isimden weblemente ulaşıcam
-        switch (strElement)
-        {
-            case "username" : myElement =username; break;
-            case "password" : myElement =password; break;
-            case "nameInput" : myElement =nameInput; break;
-            case "codeInput" : myElement =codeInput; break;
-            case "shortName" : myElement =shortName; break;
-            case "searchInput" : myElement =searchInput; break;
-            case "integrationCode" : myElement =integrationCode; break;
-            case "priorityCode" : myElement =priorityCode; break;
+        switch (strElement) {
+            case "username":
+                myElement = username;
+                break;
+            case "password":
+                myElement = password;
+                break;
+            case "nameInput":
+                myElement = nameInput;
+                break;
+            case "codeInput":
+                myElement = codeInput;
+                break;
+            case "shortName":
+                myElement = shortName;
+                break;
+            case "searchInput":
+                myElement = searchInput;
+                break;
+            case "integrationCode":
+                myElement = integrationCode;
+                break;
+            case "priorityCode":
+                myElement = priorityCode;
+                break;
+            case "iban":
+                myElement = iban;
+                break;
+            case "intCode":
+                myElement = intCode;
+                break;
         }
 
         sendKeysFunction(myElement, value);
+
     }
 
-    public void findAndClick(String strElement){  // 2.aşama
+    public void findAndClick(String strElement) {  // 2.aşama
         // burda string isimden weblemente ulaşıcam
-        switch (strElement)
-        {
-            case "loginButton" : myElement =loginButton; break;
-            case "addButton" : myElement =addButton; break;
-            case "saveButton" : myElement =saveButton; break;
-            case "closeDialog" : myElement =closeDialog; break;
-            case "searchButton" : myElement =searchButton; break;
-            case "deleteButton" : myElement =deleteButton; break;
-            case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
-            case "acceptCookies" : myElement =acceptCookies; break;
-            case "fieldsAddBtn" : myElement =fieldsAddBtn; break;
-            case "editBtn" : myElement =editBtn; break;
+        switch (strElement) {
+            case "loginButton":
+                myElement = loginButton;
+                break;
+            case "addButton":
+                myElement = addButton;
+                break;
+            case "saveButton":
+                myElement = saveButton;
+                break;
+            case "closeDialog":
+                myElement = closeDialog;
+                break;
+            case "searchButton":
+                myElement = searchButton;
+                break;
+            case "deleteButton":
+                myElement = deleteButton;
+                break;
+            case "deleteDialogBtn":
+                myElement = deleteDialogBtn;
+                break;
+            case "acceptCookies":
+                myElement = acceptCookies;
+                break;
+            case "currency":
+                myElement = currency;
+                break;
+            case "turkishlira":
+                myElement = turkishlira;
+                break;
+            case "editButton":
+                myElement = editButton;
+                break;
+            case "euro":
+                myElement = euro;
+                break;
 
         }
 
         clickFunction(myElement);
     }
 
-    public void findAndContainsText(String strElement, String text){  // 2.aşama
+    public void findAndContainsText(String strElement, String text) {  // 2.aşama
         // burda string isimden weblemente ulaşıcam
-        switch (strElement)
-        {
-            case "dashboard" : myElement =dashboard; break;
-            case "successMessage" : myElement =successMessage; break;
-            case "alreadyExist" : myElement =alreadyExist; break;
+        switch (strElement) {
+            case "dashboard":
+                myElement = dashboard;
+                break;
+            case "successMessage":
+                myElement = successMessage;
+                break;
+            case "alreadyExist":
+                myElement = alreadyExist;
+                break;
         }
 
-        verifyContainsText(myElement,text);
+        verifyContainsText(myElement, text);
     }
 
 
-    public void SearchAndDelete(String searchText){
+    public void SearchAndDelete(String searchText) {
+        waitUntilLoading();
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
@@ -137,33 +207,26 @@ public class DialogContent extends Parent{
         findAndClick("deleteDialogBtn");// dilogdaki silme butonuna bas
     }
 
-    public void Edit(String strElement) throws InterruptedException {
+    public void Edit(String searchText)  {
 
-        findAndSend("searchInput", strElement);
+        waitUntilLoading();
+
+        findAndSend("searchInput", searchText);
+
         findAndClick("searchButton");
 
         waitUntilLoading();
 
         findAndClick("editButton");
-    }
-
-    public void EditClick(String strElement){
-
-
-        findAndSend("nameInput",strElement);
 
     }
 
+    public void EditClick(String strElement) {
 
 
+        findAndSend("nameInput", strElement);
 
-
-
-
-
-
-
-
+    }
 
 
 }

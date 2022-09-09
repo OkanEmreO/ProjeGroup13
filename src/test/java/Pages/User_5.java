@@ -122,7 +122,7 @@ public class User_5 extends Parent {
 
     }
 
-    public void Edit(String strElement) throws InterruptedException {
+    public void Edit(String strElement)  {
 
         findAndSend("searchInput", strElement);
         findAndClick("searchButton");
