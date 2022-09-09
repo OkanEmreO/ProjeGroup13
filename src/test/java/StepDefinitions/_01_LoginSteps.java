@@ -18,11 +18,6 @@ public class _01_LoginSteps {
 
     @When("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
-        // waitleri var
-//        dc.username.sendKeys("richfield.edu");
-//        dc.password.sendKeys("Richfield2020!");
-//        dc.loginButton.click();
-        // 1 .aşama
         dc.findAndSend("username","richfield.edu");
         dc.findAndSend("password","Richfield2020!");
         dc.findAndClick("loginButton");
@@ -30,9 +25,6 @@ public class _01_LoginSteps {
 
     @Then("User should login successfuly")
     public void userShouldLoginSuccessfuly() {
-//        dc.waitUntilVisible(dc.dashboard);
-//        Assert.assertTrue(dc.dashboard.getText().contains("Dashboard"));
-
         dc.findAndContainsText("dashboard","Dashboard");
         dc.findAndClick("acceptCookies");
     }
