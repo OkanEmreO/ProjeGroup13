@@ -18,6 +18,7 @@ public class User_1_Steps extends Parent {
         ln.findAndClick("humanresources");
         ln.findAndClick("setup3");
         ln.findAndClick("positionsCategories");
+
     }
 
     @When("Create position categories")
