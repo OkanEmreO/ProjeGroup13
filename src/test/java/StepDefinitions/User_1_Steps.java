@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Pages.LeftNav;
 import Pages.Parent;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,14 +9,12 @@ import io.cucumber.java.en.When;
 public class User_1_Steps extends Parent {
     DialogContent dc=new DialogContent();
 
-    LeftNav ln = new LeftNav();
-
 
     @Given("Navigate to position categories")
     public void navigateToPositionCategories() {
-        ln.findAndClick("humanresources");
-        ln.findAndClick("setup3");
-        ln.findAndClick("positionsCategories");
+        dc.findAndClick("humanresources");
+        dc.findAndClick("setup3");
+        dc.findAndClick("positionsCategories");
     }
 
     @When("Create position categories")
