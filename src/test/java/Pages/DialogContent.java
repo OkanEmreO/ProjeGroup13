@@ -74,6 +74,13 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editBtn;
 
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
+    private WebElement capacity;
+
+
+
+
+
 
 
     WebElement myElement;
@@ -89,6 +96,7 @@ public class DialogContent extends Parent{
             case "searchInput" : myElement =searchInput; break;
             case "integrationCode" : myElement =integrationCode; break;
             case "priorityCode" : myElement =priorityCode; break;
+            case "capacity" : myElement=capacity;break;
         }
 
         sendKeysFunction(myElement, value);
@@ -108,6 +116,7 @@ public class DialogContent extends Parent{
             case "acceptCookies" : myElement =acceptCookies; break;
             case "fieldsAddBtn" : myElement =fieldsAddBtn; break;
             case "editBtn" : myElement =editBtn; break;
+
 
         }
 
