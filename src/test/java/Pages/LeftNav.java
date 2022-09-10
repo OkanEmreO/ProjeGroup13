@@ -10,36 +10,29 @@ public class LeftNav extends Parent{
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-
     @FindBy(xpath="(//span[text()='Setup'])[1]")
     private WebElement setupOne;
-
     @FindBy(xpath = "//span[text()='Parameters']")
     private WebElement parameters;
-
     @FindBy(xpath = "//span[text()='Countries']")
     private WebElement countries;
-
     @FindBy(xpath = "//span[text()='Citizenships']")
     private WebElement citizenShip;
-
     @FindBy(xpath = "//span[text()='Nationalities']")
     private WebElement nationalities;
-
     @FindBy(xpath = "//span[text()='Fees']")
     private WebElement fees;
-
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
     private WebElement entranceExamsOne;
-
     @FindBy(xpath = "(//span[text()='Setup'])[2]")
     private WebElement setupTwo;
-
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
-
     @FindBy(xpath = "//span[text()='Fields']")
     private WebElement fields;
+    @FindBy(xpath = "//span[text()='Discounts']")
+    private WebElement discounts;
+
 
     WebElement myElement;
     public void findAndClick(String strElement){  // 2.aşama
@@ -56,6 +49,8 @@ public class LeftNav extends Parent{
             case "setupTwo" : myElement =setupTwo; break;
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "fields" : myElement =fields; break;
+            case "discounts" : myElement =discounts; break;
+
 
         }
 
