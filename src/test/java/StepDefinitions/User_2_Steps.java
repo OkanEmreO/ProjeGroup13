@@ -41,9 +41,5 @@ public class User_2_Steps {
     }
 
 
-    @Then("Success message should be displayed")
-    public void successMessageShouldBeDisplayed() {
 
-        us.findAndContainsText("successMessage","success");
-    }
 }
