@@ -23,3 +23,22 @@ Feature: User_7 Scenario
 
     Then Success message should be displayed
 
+    And Click edit button
+      | editBtn |
+
+    And Edit locations
+      | nameInput | Sevket |
+      | shortName | Sev    |
+      | capacity  | 100    |
+
+    And Click on the element in the Dialog
+      | saveButton |
+
+    Then Success message should be displayed
+
+    And Delete Locations
+      | deleteButton    |
+      | deleteDialogBtn |
+
+    Then Success message should be displayed
+
