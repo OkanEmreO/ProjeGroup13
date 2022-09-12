@@ -19,7 +19,6 @@ public class User_5_Steps {
         List<String> listElement = elements.asList(String.class);
 
         for(int i=0;i<listElement.size();i++) {
-            //   System.out.println("listElement = " + listElement.get(i));
             user5.findAndClick(listElement.get(i));
         }
 
