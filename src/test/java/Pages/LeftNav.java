@@ -22,6 +22,9 @@ public class LeftNav extends Parent{
     private WebElement nationalities;
     @FindBy(xpath = "//span[text()='Fees']")
     private WebElement fees;
+
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    private WebElement humanResources;
     @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
     private WebElement entranceExamsOne;
     @FindBy(xpath = "(//span[text()='Setup'])[2]")
@@ -33,9 +36,11 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Discounts']")
     private WebElement discounts;
 
-    @FindBy(xpath = "//span[text()='Document Types']")
-    private WebElement documentType;
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    private WebElement setup;
 
+    @FindBy(xpath = "//span[text()='Positions']")
+    private WebElement positions;
 
 
     WebElement myElement;
@@ -43,6 +48,9 @@ public class LeftNav extends Parent{
         // burda string isimden weblemente ulaşıcam
         switch (strElement)
         {
+            case "setup": myElement = setup;break;
+            case "positions": myElement = positions;break;
+            case "humanResources": myElement = humanResources;break;
             case "setupOne" : myElement =setupOne; break;
             case "parameters" : myElement =parameters; break;
             case "countries" : myElement =countries; break;
@@ -54,7 +62,6 @@ public class LeftNav extends Parent{
             case "entranceExamsTwo" : myElement =entranceExamsTwo; break;
             case "fields" : myElement =fields; break;
             case "discounts" : myElement =discounts; break;
-            case "documentType" : myElement=documentType;break;
 
 
         }
