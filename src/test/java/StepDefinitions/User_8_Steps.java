@@ -2,11 +2,10 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
-import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
-public class User_8Steps {
+public class User_8_Steps {
 
     LeftNav ln=new LeftNav();
 
