@@ -51,7 +51,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'BUTTON.ADD')]//button")
     private WebElement fieldsAddBtn;
     @FindBy(xpath = "//ms-edit-button//button")
-    private WebElement editBtn;
+    private WebElement editButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='description']//input")
     private WebElement description;
     @FindBy(xpath = "//ms-text-field[contains(@placeholder,'TITLE.DESCRIPTION')]//input")
@@ -99,7 +99,7 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
             case "fieldsAddBtn" : myElement =fieldsAddBtn; break;
-            case "editBtn" : myElement =editBtn; break;
+            case "editButton" : myElement =editButton; break;
 
         }
 
@@ -138,7 +138,7 @@ public class DialogContent extends Parent{
 
         waitUntilLoading();
 
-        findAndClick("editBtn");
+        findAndClick("editButton");
     }
 
     public void EditClick(String strElement){
