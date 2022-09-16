@@ -37,7 +37,7 @@ public class User_1_Steps extends Parent {
     public void editUserPosition() {
         dc.findAndSend("searchInput","Sergen");
         dc.findAndClick("searchButton");
-        dc.findAndClick("editBtn");
+        dc.findAndClick("editButton");
         dc.findAndSend("nameInput", "Pascal");
         dc.findAndClick("saveButton");
     }

@@ -48,7 +48,7 @@ public class User_3_Steps extends Parent {
 
         waitUntilLoading();
 
-        dc.findAndClick("editBtn");
+        dc.findAndClick("editButton");
         dc.findAndSend("nameInput","papara");
         dc.findAndClick("saveButton");
     }

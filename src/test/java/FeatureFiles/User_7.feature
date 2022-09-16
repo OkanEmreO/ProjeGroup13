@@ -24,7 +24,7 @@ Feature: User_7 Scenario
     Then Success message should be displayed
 
     And Click edit button
-      | editBtn |
+      | editButton |
 
     And Edit locations
       | nameInput | Sevket |
