@@ -40,10 +40,4 @@ public class User_2_Steps {
         us.findAndClick("deleteButton2");
     }
 
-
-    @Then("Success message should be displayed")
-    public void successMessageShouldBeDisplayed() {
-
-        us.findAndContainsText("successMessage","success");
-    }
 }
