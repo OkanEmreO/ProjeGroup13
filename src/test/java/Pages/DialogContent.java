@@ -10,7 +10,6 @@ public class DialogContent extends Parent{
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-
     @FindBy(id="mat-input-0")
     private WebElement username;
     @FindBy(id="mat-input-1")

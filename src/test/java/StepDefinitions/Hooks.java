@@ -25,8 +25,6 @@ public class Hooks {
     public void after(Scenario scenario)
     {
         System.out.println("Senaryo Bitti");
-
-
         GWD.quitDriver();
     }
 

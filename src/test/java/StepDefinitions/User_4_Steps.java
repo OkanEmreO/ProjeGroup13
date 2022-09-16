@@ -14,9 +14,7 @@ public class User_4_Steps {
         ln.findAndClick("setupOne");
         ln.findAndClick("parameters");
         ln.findAndClick("fields");
-
     }
-
     @When("Create a Fields")
     public void createAFields() {
         dc.findAndClick("fieldsAddBtn");
@@ -33,8 +31,6 @@ public class User_4_Steps {
         dc.findAndClick("editBtn");
         dc.findAndSend("nameInput","EditUser4");
         dc.findAndClick("saveButton");
-
-
 
     }
 
