@@ -57,9 +57,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-text-field[contains(@placeholder,'TITLE.DESCRIPTION')]//input")
     private WebElement descriptionText;
 
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement editNameInput;
 
+    @FindBy(xpath = "//mat-select[@role='combobox']")
+    private WebElement editStage;
 
-
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[2]")
+    private WebElement stageSelect2;
 
 
 
@@ -79,8 +84,7 @@ public class DialogContent extends Parent{
             case "priorityCode" : myElement =priorityCode; break;
             case "description" : myElement =description; break;
             case "descriptionText" : myElement =descriptionText; break;
-
-
+            case "editNameInput" : myElement=editNameInput;break;
         }
 
         sendKeysFunction(myElement, value);
@@ -99,8 +103,14 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
             case "fieldsAddBtn" : myElement =fieldsAddBtn; break;
+<<<<<<< HEAD
             case "editButton" : myElement =editButton; break;
 
+=======
+            case "editBtn" : myElement =editBtn; break;
+            case "editStage" : myElement=editStage;break;
+            case "stageSelect2" : myElement=stageSelect2;break;
+>>>>>>> origin/User_3
         }
 
         clickFunction(myElement);

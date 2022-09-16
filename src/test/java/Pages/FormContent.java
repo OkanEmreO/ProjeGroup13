@@ -23,6 +23,14 @@ public class FormContent extends Parent{
     @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
     private WebElement gradeLevel2;
 
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
+    private WebElement stage;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
+    private WebElement stageSelect;
+
+
+
     WebElement myElement;
 
     public void findAndClick(String strElement){  // 2.aşama
@@ -33,6 +41,9 @@ public class FormContent extends Parent{
             case "academicPeriod1" : myElement =academicPeriod1; break;
             case "gradeLevel" : myElement =gradeLevel; break;
             case "gradeLevel2" : myElement =gradeLevel2; break;
+            case "stage" : myElement=stage;break;
+            case "stageSelect" : myElement=stageSelect;break;
+
         }
 
         clickFunction(myElement);
