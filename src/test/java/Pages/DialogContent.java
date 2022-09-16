@@ -131,12 +131,14 @@ public class DialogContent extends Parent{
 
     public void Edit(String strElement) throws InterruptedException {
 
+        waitUntilLoading();
         findAndSend("searchInput", strElement);
+        waitUntilLoading();
         findAndClick("searchButton");
 
         waitUntilLoading();
 
-        findAndClick("editButton");
+        findAndClick("editBtn");
     }
 
     public void EditClick(String strElement){
