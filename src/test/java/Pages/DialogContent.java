@@ -103,14 +103,10 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" : myElement =deleteDialogBtn; break;
             case "acceptCookies" : myElement =acceptCookies; break;
             case "fieldsAddBtn" : myElement =fieldsAddBtn; break;
-<<<<<<< HEAD
             case "editButton" : myElement =editButton; break;
-
-=======
-            case "editBtn" : myElement =editBtn; break;
             case "editStage" : myElement=editStage;break;
             case "stageSelect2" : myElement=stageSelect2;break;
->>>>>>> origin/User_3
+
         }
 
         clickFunction(myElement);
@@ -141,9 +137,8 @@ public class DialogContent extends Parent{
 
     public void Edit(String strElement) throws InterruptedException {
 
-        waitUntilLoading();
+
         findAndSend("searchInput", strElement);
-        waitUntilLoading();
         findAndClick("searchButton");
 
         waitUntilLoading();

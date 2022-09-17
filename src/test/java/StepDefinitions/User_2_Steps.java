@@ -1,43 +1,51 @@
 package StepDefinitions;
 
+import Pages.DialogContent;
+import Pages.LeftNav;
+import Pages.Parent;
 import Pages.User_2;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class User_2_Steps {
+public class User_2_Steps extends Parent {
 
     User_2 us = new User_2();
+
+    LeftNav ln = new LeftNav();
+
+    DialogContent dc = new DialogContent();
 
     @Given("Navigate to Attestations")
     public void navigateToAttestations() {
 
-        us.findAndClick("humanResources");
-        us.findAndClick("setup");
-        us.findAndClick("attestations");
+        ln.findAndClick("humanResources");
+        ln.findAndClick("setup");
+        ln.findAndClick("attestation");
     }
 
     @When("Create a Attestetions name")
     public void createAAttestetionsName() {
 
-        us.findAndClick("addButton");
-        us.findAndSend("nameInput","yonis2");
-        us.findAndClick("saveButton");
+        dc.findAndClick("addButton");
+        dc.findAndSend("nameInput","yonis2");
+        dc.findAndClick("saveButton");
 
     }
 
     @And("Edit a Attestetions name")
     public void editAAttestetionsName() {
-        us.findAndClick("editButton");
-        us.findAndSend("nameInput","yonis3");
-        us.findAndClick("saveButton");
+        dc.findAndClick("editButton");
+        dc.findAndSend("nameInput","yonis3");
+        dc.findAndClick("saveButton");
     }
 
     @And("Delete a Attestetions name")
     public void deleteAAttestetionsName() {
-        us.findAndClick("deleteButton");
-        us.findAndClick("deleteButton2");
+        waitUntilLoading();
+        dc.findAndClick("deleteButton");
+        dc.findAndClick("deleteDialogBtn");
     }
 
 }

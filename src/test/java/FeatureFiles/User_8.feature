@@ -4,7 +4,7 @@ Feature: Departments under School Setup Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
+  @Regression
   Scenario: Admin User should be able to Add-Edit-Delete Departments
     Given Navigate to Departments
     When Create a Departments name

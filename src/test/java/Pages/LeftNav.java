@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import freemarker.cache.WebappTemplateLoader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -45,6 +46,20 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Document Types']")
     private WebElement documentType;
 
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    private WebElement positionCategories;
+
+    @FindBy(xpath = "//span[text()='Attestations']")
+    private WebElement attestation;
+
+    @FindBy(xpath = "(//div/fuse-nav-vertical-collapsable)[3]")
+    private WebElement schoolSetup;
+
+    @FindBy(xpath = "//span[text()='Departments']")
+    private WebElement departments;
+
+    @FindBy(xpath = "//span[text()='Bank Accounts']")
+    private WebElement bankAccount;
 
 
 
@@ -68,6 +83,12 @@ public class LeftNav extends Parent{
             case "fields" : myElement =fields; break;
             case "discounts" : myElement =discounts; break;
             case "documentType" : myElement=documentType;break;
+            case "positionCategories": myElement=positionCategories;break;
+            case "attestation": myElement=attestation;break;
+            case "schoolSetup": myElement=schoolSetup;break;
+            case "departments": myElement=departments;break;
+            case "bankAccount": myElement=bankAccount;break;
+
 
 
         }
