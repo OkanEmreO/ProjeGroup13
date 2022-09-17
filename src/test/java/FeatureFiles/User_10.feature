@@ -4,7 +4,7 @@ Feature: Education Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
+  @Regression
   Scenario: Create,Edit and Delete a Subjects Categories
     And Click on the element in the Dialog2
       | setup    |

@@ -4,7 +4,7 @@ Feature: Nationalities Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
+  @Regression
   Scenario: Create,Edit and Delete a Nationalities
     And Click on the element in the User funcitoanality
       | setupOne      |

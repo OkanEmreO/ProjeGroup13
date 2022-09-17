@@ -4,7 +4,7 @@ Feature: Education Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
+  @Regression
   Scenario: Create a Subjects Categories
     And Click on the element in the Dialog1
       | education         |
@@ -22,7 +22,7 @@ Feature: Education Functionality
       | saveButton |
 
     And Success message should be displayed
-
+  @Regression
   Scenario: Edit a Subjects Categories
     And Click on the element in the Dialog1
       | education         |
@@ -40,7 +40,7 @@ Feature: Education Functionality
       | saveButton |
 
     Then Success message should be displayed
-
+  @Regression
   Scenario:Delete a Subjects Categories
     And Click on the element in the Dialog1
       | education         |

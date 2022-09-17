@@ -4,7 +4,7 @@ Feature: User_7 Scenario
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
+  @Regression
   Scenario: School locations create, edit and delete exam
     Given Navigate to School Locations
       | setupOne    |

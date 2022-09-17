@@ -15,9 +15,9 @@ public class User_1_Steps extends Parent {
 
     @Given("Navigate to position categories")
     public void navigateToPositionCategories() {
-        ln.findAndClick("humanresources");
-        ln.findAndClick("setup3");
-        ln.findAndClick("positionsCategories");
+        ln.findAndClick("humanResources");
+        ln.findAndClick("setup");
+        ln.findAndClick("positionCategories");
     }
 
     @When("Create position categories")
@@ -35,9 +35,10 @@ public class User_1_Steps extends Parent {
 
     @When("Edit user position")
     public void editUserPosition() {
+        waitUntilLoading();
         dc.findAndSend("searchInput","Sergen");
         dc.findAndClick("searchButton");
-        dc.findAndClick("editBtn");
+        dc.findAndClick("editButton");
         dc.findAndSend("nameInput", "Pascal");
         dc.findAndClick("saveButton");
     }

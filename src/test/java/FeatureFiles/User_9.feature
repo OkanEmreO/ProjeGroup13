@@ -4,7 +4,7 @@ Feature: Bank Accounts Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-
+  @Regression
   Scenario: Add a new Bank Account
     And Click on the element in the user
       | setupOne    |
@@ -27,7 +27,7 @@ Feature: Bank Accounts Functionality
       | saveButton |
 
     Then Success message should be displayed
-
+  @Regression
   Scenario:Edit Bank Account
     And Click on the element in the user
       | setupOne    |
@@ -51,7 +51,7 @@ Feature: Bank Accounts Functionality
 
     Then Success message should be displayed
 
-
+  @Regression
   Scenario:Delete Bank Account
     And Click on the element in the user
       | setupOne    |
